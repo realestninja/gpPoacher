@@ -1,0 +1,11 @@
+node_modules/
+
+*.swp
+*.swo
+*.vim
+tags
+
+config.js
+
+output
+*.jpg

@@ -1,0 +1,22 @@
+{
+  "name": "gppoacher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": ">=0.21.1",
+    "lodash": "^4.17.19"
+  },
+  "devDependencies": {
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "18.0.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-extra-rules": "^0.8.1",
+    "eslint-plugin-import": "^2.21.2"
+  }
+}
