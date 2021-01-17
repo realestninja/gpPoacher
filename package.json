@@ -9,9 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "axios": ">=0.21.1",
-    "lodash": "^4.17.19",
-    "request": "^2.88.2"
+    "axios": "^0.21.1",
+    "lodash": "^4.17.19"
   },
   "devDependencies": {
     "eslint": "^7.2.0",
