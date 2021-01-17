@@ -16,8 +16,9 @@ const main = async () => {
     const albumUrl = process.argv[2];
     handleAlbum(albumUrl);
   } else {
+    // create url list for all albums in shareUrls file
     const albumUrls = await readUrlFile();
-    console.log("albumUrls:", albumUrls);
+    albumUrls.forEach((albumUrl) => handleAlbum(albumUrl));
   }
 };
 
