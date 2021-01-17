@@ -16,9 +16,8 @@ const writeToFile = (albumUrl, content) => {
 
   if (!fs.existsSync(outputFolder)) fs.mkdirSync(outputFolder);
 
-  fs.writeFileSync(outputFile, "");
   fs.writeFileSync(outputFile, JSON.stringify(fileContent));
-  console.log(`${albumId} done`);
+  console.log(`${albumId} done.`);
 };
 
 const readUrlFile = async () => {
