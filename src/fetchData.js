@@ -5,6 +5,7 @@ const fetchData = async (albumUrl) => {
   try {
     response = await axios.get(albumUrl);
   } catch (e) {
+    console.log(`Error on ${albumUrl}`);
     console.error("e:", e);
     return false;
   }
