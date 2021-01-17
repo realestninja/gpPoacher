@@ -14,7 +14,6 @@ const extractUrls = (content) => {
   content.forEach((line) => {
     const regex = /(\bhttps:\/\/lh3.googleusercontent.com\/).[a-zA-Z0-9-_]*/g;
     const match = line.match(regex);
-    console.log("match:", match);
 
     if (match.length === 1) {
       urls.push(match[0]);
