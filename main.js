@@ -1,6 +1,6 @@
 const { fetchData } = require("./src/fetchData");
 const { processData } = require("./src/processData");
-const { writeToFile, readUrlFile } = require("./lib/fileActions");
+const { writeToFile, readUrlFile } = require("./src/fileActions");
 
 const handleAlbum = async (albumUrl) => {
   console.log("fetching from url: ", albumUrl);
