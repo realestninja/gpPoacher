@@ -9,3 +9,5 @@ config.js
 
 output
 *.jpg
+
+testdata*
