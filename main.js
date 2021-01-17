@@ -10,9 +10,8 @@ const main = async () => {
     rawBody = await fetchData(albumUrl);
 
     const body = await processData(rawBody);
-    console.log("body:", body);
 
-    writeToFile(body);
+    writeToFile(albumUrl, body);
   } else {
     console.log("album share URL required as arg");
   }

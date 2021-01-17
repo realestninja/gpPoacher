@@ -9,23 +9,25 @@ const removeClutter = (input) => {
   return content;
 };
 
-const fixFirstLine = (content) => {
-  const firstLine = content[0];
+const extractUrls = (content) => {
+  const urls = [];
+  content.forEach((line) => {
+    const regex = /(\bhttps:\/\/lh3.googleusercontent.com\/).[a-zA-Z0-9-_]*/g;
+    const match = line.match(regex);
+    console.log("match:", match);
 
-  const regex = /[A-Z]/g;
-  const found = firstLine.match(regex);
+    if (match.length === 1) {
+      urls.push(match[0]);
+    }
+  });
 
-  console.log("firstLine:", firstLine);
-  console.log("-----------");
-  console.log("found:", found);
-
-  return content;
+  return urls;
 };
 
 const processData = async (rawBody) => {
   let content = rawBody.split("\n");
   content = removeClutter(content);
-  content = fixFirstLine(content);
+  content = extractUrls(content);
 
   return content;
 };
