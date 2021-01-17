@@ -1,3 +1,5 @@
 # trim result:
 lineWithUrls = keepOccurrences(lineWithUrls, "null,[]");
 lineWithUrls = tossOccurrences(lineWithUrls, "video");
+
+
