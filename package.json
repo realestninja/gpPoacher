@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.1",
-    "lodash": "^4.17.19"
+    "line-reader-sync": "^0.1.0"
   },
   "devDependencies": {
     "eslint": "^7.2.0",

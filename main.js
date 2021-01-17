@@ -1,19 +1,23 @@
 const { fetchData } = require("./src/fetchData");
 const { processData } = require("./src/processData");
-const { writeToFile } = require("./lib/fileActions");
+const { writeToFile, readUrlFile } = require("./lib/fileActions");
+
+const handleAlbum = async (albumUrl) => {
+  console.log("fetching from url: ", albumUrl);
+  const rawBody = await fetchData(albumUrl);
+  const body = await processData(rawBody);
+
+  writeToFile(albumUrl, body);
+};
 
 const main = async () => {
-  let rawBody;
   if (process.argv.length >= 3) {
+    // create url list for requested album
     const albumUrl = process.argv[2];
-    console.log("fetching from url: ", albumUrl);
-    rawBody = await fetchData(albumUrl);
-
-    const body = await processData(rawBody);
-
-    writeToFile(albumUrl, body);
+    handleAlbum(albumUrl);
   } else {
-    console.log("album share URL required as arg");
+    const albumUrls = await readUrlFile();
+    console.log("albumUrls:", albumUrls);
   }
 };
 
