@@ -3,13 +3,13 @@ const LineReaderSync = require("line-reader-sync");
 
 const writeToFile = (albumUrl, content) => {
   const albumUrlParts = albumUrl.split("/");
-  const albumId = albumUrlParts[albumUrlParts.length - 1];
+  const albumShareId = albumUrlParts[albumUrlParts.length - 1];
 
   const outputFolder = "./output";
-  const outputFile = `${outputFolder}/${albumId}.json`;
+  const outputFile = `${outputFolder}/${albumShareId}.json`;
 
   const fileContent = {
-    albumId,
+    albumShareId,
     albumUrl,
     content,
   };
@@ -17,7 +17,7 @@ const writeToFile = (albumUrl, content) => {
   if (!fs.existsSync(outputFolder)) fs.mkdirSync(outputFolder);
 
   fs.writeFileSync(outputFile, JSON.stringify(fileContent));
-  console.log(`${albumId} done.`);
+  console.log(`${albumShareId} done.`);
 };
 
 const readUrlFile = async () => {
