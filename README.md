@@ -27,5 +27,5 @@ Every JSON will have the `albumId`, the `albumUrl` and all the image urls in an 
 
 ## Usage
 
-* For usage on a single album, just run `node main.js albumid`, for example `node main.js https://photos.app.goo.gl/zHh138yoGkLb4vfN9`.
+* For usage on a single album, just run `node main.js <album share url>`, for example `node main.js https://photos.app.goo.gl/zHh138yoGkLb4vfN9`.
 * For usage on multiple albums, use the `shareUrls.template`. Delete it's placeholder content, then place all the urls in seperate lines inside and rename it to `shareUrls`. Now just run `node main.js`.
